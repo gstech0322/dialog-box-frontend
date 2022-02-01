@@ -1,0 +1,352 @@
+@import ../../styles/helpers
+
+.header
+    position: relative
+    z-index: 20
+    padding: 20px 0
+    border-bottom: 1px solid $neutrals6
+    // box-shadow: #04111d40 0px 0px 8px 0px
+    // +n
+        // padding: 48px 0 24px
+    +dark
+        border-color: $neutrals3
+
+.container
+    display: flex
+    align-items: center
+    & > .button
+        position: relative
+        margin-right: 10px
+        margin-left: 0
+        +n
+            display: none
+
+.logo
+    position: relative
+    display: flex
+    align-items: center
+    z-index: 12
+    flex-shrink: 0
+    width: 203px
+    margin-right: 32px
+    +n
+        margin-right: auto
+    img
+        width: 40px
+        height: 40px
+
+.site_title
+    margin-left: 7px
+    font-family: 'Inter', sans-serif
+    font-weight: bold
+    color: $neutrals1
+    font-size: 26px
+    +dark
+        color: $neutrals8
+
+.wrapper
+    display: flex
+    align-items: center
+    flex-grow: 1
+    +n
+        flex-grow: 0
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        flex-direction: column
+        align-items: stretch
+        height: 100vh
+        margin: 0
+        padding: 85px 32px 40px
+        box-shadow: 0px 64px 64px rgba(31, 47, 70, 0.2)
+        background: $neutrals8
+        visibility: hidden
+        opacity: 0
+        transition: all .2s
+        &.active
+            visibility: visible
+            opacity: 1
+    .button
+        display: none
+        +m
+            display: inline-flex
+            margin-top: 16px
+
+.collection_wrapper
+    display: flex
+    align-items: center
+    flex-grow: 1
+    +n
+        flex-grow: 0
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        flex-direction: column
+        align-items: stretch
+        height: 100vh
+        margin: 0
+        padding: 85px 32px 40px
+        box-shadow: 0px 64px 64px rgba(31, 47, 70, 0.2)
+        background: $neutrals8
+        visibility: hidden
+        opacity: 0
+        transition: all .2s
+        &.active
+            visibility: visible
+            opacity: 1
+    .button
+        display: none
+        +m
+            display: inline-flex
+            margin-top: 16px
+
+.collection_nav
+    // display: none
+    +n
+        display: block
+
+.collection_nav_menu
+    display: none
+    +n
+        display: block
+
+.collection_nav_link
+    display: none
+    +n
+        display: block
+        color: $neutrals4
+        line-height: 40px
+        padding-left: 50px
+        font-size: 16px
+        line-height: 64px
+        transition: color .2s
+    &:hover,
+    &.active
+        color: $neutrals6
+
+.nav
+    display: flex
+    margin-right: auto
+    border-left: 2px solid $neutrals6
+    font-size: 15px
+    +n
+        display: flex
+        flex-direction: column
+        margin: 0 0 40px
+        border: none
+
+.link
+    padding-left: 32px
+    +dm-sans
+    line-height: 40px
+    color: $neutrals4
+    transition: color .2s
+    +n
+        padding-left: 15px
+        font-size: 16px
+        line-height: 64px
+    &:hover,
+    &.active
+        color: $neutrals6
+    &:nth-child(n+4)
+        display: none
+        +n
+            display: block
+
+.collection
+    cursor: pointer
+    margin-left: 32px
+    +dm-sans
+    line-height: 40px
+    color: $neutrals4
+    transition: color .2s
+    +n
+        margin-left: 15px
+        margin-right: 15px
+        font-size: 16px
+        line-height: 64px
+    &:hover,
+    &.active
+        color: $neutrals6
+
+.collection_menu
+    cursor: pointer
+    margin-left: 32px
+    +dm-sans
+    line-height: 40px
+    color: $neutrals4
+    transition: color .2s
+    +n
+        margin-left: 15px
+        margin-right: 15px
+        font-size: 16px
+        line-height: 64px
+    &:hover,
+    &.active
+        color: $neutrals6
+        
+.collection_name
+    display: flex
+    justify-content: space-between
+
+.collection_nav_name
+    display: flex
+    justify-content: flex-start
+
+.arrow_next_icon
+    display: none
+    +n
+        display: block
+        // margin-top: -2px
+
+.arrow_prev_icon
+    display: none
+    +n
+        display: block
+        // margin-top: -2px
+        margin-right: 5px
+
+.dropdown
+    position: relative
+    display: inline-block
+
+.dropdown_content
+    display: none
+    position: absolute
+    top: 40px
+    left: 8px
+    background-color: #fcfcfd
+    border: 1px solid #d5cdcd
+    min-width: 150px
+    z-index: 1
+    transition: all 2s
+    font-family: 'Inter', sans-serif
+
+.dropdown_content a:hover
+    color: black
+    background: #e5e5e591
+
+.dropdown:hover .dropdown_content
+    display: block
+    transition: all .2s
+    background: #fdfdfd
+    margin-left: 13px
+    +n
+        display: none
+
+.dropdown_content .dropdown_content_item
+    color: $neutrals4
+    padding: 6px 12px
+    text-decoration: none
+    display: block
+    font-size: 15px
+    &:hover,
+    &.active
+        color: black
+
+.search
+    position: relative
+    flex-shrink: 0
+    width: 256px
+    margin-right: 24px
+    +t
+        display: none
+    +m
+        display: block
+        width: 100%
+        margin: auto 0 0
+
+.input
+    width: 100%
+    height: 40px
+    padding: 0 42px 0 16px
+    background: none
+    border: 2px solid $neutrals6
+    border-radius: 8px
+    +poppins
+    +caption-2
+    transition: border-color .2s
+    +placeholder
+        color: $neutrals4
+    +dark
+        border-color: $neutrals3
+        color: $neutrals8
+    &:focus
+        border-color: $neutrals4
+
+.result
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 42px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $blue
+
+.notification
+    margin-right: 24px
+    +m
+        margin-right: 20px
+
+.burger
+    display: none
+    +n
+        display: block
+        position: relative
+        margin-left: 5px
+        width: 32px
+        height: 32px
+        background: none
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        &.active
+            &:before
+                transform: translateY(0) rotate(-45deg)
+            &:after
+                transform: translateY(0) rotate(45deg)
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            top: 16px
+            left: 6px
+            width: 20px
+            height: 3px
+            background: $neutrals4
+            border-radius: 2px
+            transition: transform .2s
+            +a
+                width: 16px
+        &:before
+            transform: translateY(-4px)
+        &:after
+            transform: translateY(3px)
+        +a
+            margin-left: 0
+            width: 15px
+
+.social
+    display: flex
+    position: relative
+    list-style: none
+    margin-right: 10px
+    +a
+        margin-right: 0
+
+.social li
+    color: $neutrals4
+    padding: 2px
+
+.openseaIcon
+    width: 24px
+    height: 24px
+    cursor: pointer
+    opacity: 0.7
+    +a
+        width: 20px
+        height: 20px

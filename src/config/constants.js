@@ -1,0 +1,1 @@
+export const advarAddress = '0xFeB4e14949795fAcc8E738212Ba6EC0F7B378345';

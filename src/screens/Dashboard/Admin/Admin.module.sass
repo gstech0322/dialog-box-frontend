@@ -1,0 +1,30 @@
+@import "../../../styles/helpers";
+
+.table_container
+    width: 100%
+    min-height: 540px
+    padding: 5px 100px
+    margin-bottom: 100px
+    +d
+        padding: 5px 70px
+    +t
+        padding: 5px 50px
+    +n
+        padding: 5px 30px
+    +m
+        padding: 5px 0px
+
+.btn_position
+    display: flex
+    justify-content: flex-end
+    padding-bottom: 5px
+
+.text_position
+    margin: 60px auto 10px
+
+.del_txt
+    cursor: pointer
+    color: red
+    text-decoration: underline
+    &:active
+        color: $neutrals1
